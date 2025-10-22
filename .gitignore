@@ -1,2 +1,677 @@
-#এই ফাইলে Git ignore প্যাটার্নস থাকবে যেমন data/, logs/, *.pyc, __pycache__ ইগনোর করার জন্য; এটি সেনসিটিভ/টেম্প ফাইল এক্সক্লুড করার জন্য তৈরি, রেপো ক্লিন রাখে।
-PPsd
+# =============================================================================
+# NeoMate AI - Ultimate .gitignore (Professional Edition)
+# =============================================================================
+# Comprehensive Git ignore patterns for NeoMate AI development
+# Ensures repository security, cleanliness, and optimal performance
+#
+# Organized Sections:
+# 1. Python Ecosystem
+# 2. Virtual Environments & Dependencies
+# 3. Development Environments & IDEs
+# 4. NeoMate Core Sensitive Data
+# 5. Build & Distribution Systems
+# 6. Operating System Artifacts
+# 7. Temporary & Cache Files
+# 8. Databases & Persistence
+# 9. AI/ML & Data Science Assets
+# 10. Security & Cryptography
+# 11. Media & Assets
+# 12. Testing & Quality Assurance
+# 13. Deployment & Infrastructure
+# 14. Advanced Development Tools
+# 15. Legacy & Backup Files
+# =============================================================================
+
+# =============================================================================
+# 1. PYTHON ECOSYSTEM
+# =============================================================================
+# Core Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution & packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python testing & coverage
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Python development tools
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+profile_default/
+ipython_config.py
+.python-version
+
+# =============================================================================
+# 2. VIRTUAL ENVIRONMENTS & DEPENDENCIES
+# =============================================================================
+# Standard virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+NeoMate_env/
+neomate_env/
+virtualenv/
+virtualenv-*/
+conda-env/
+.conda/
+
+# Python package managers
+Pipfile.lock
+poetry.lock
+.pdm.toml
+.pdm-python
+.pdm-build/
+__pypackages__/
+
+# Node.js (for UI components)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# =============================================================================
+# 3. DEVELOPMENT ENVIRONMENTS & IDEs
+# =============================================================================
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.project
+.pydevproject
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# =============================================================================
+# 4. NEOMATE CORE SENSITIVE DATA
+# =============================================================================
+# Configuration files with secrets
+config/secrets.yaml
+config/api_keys.yaml
+neomate_config.local
+neomate_secrets.local
+
+# User data & profiles
+data/user_data/
+data/profiles/
+data/personal/
+
+# Memory & context
+data/memory/
+data/context/
+data/cache/
+
+# Logs with sensitive information
+logs/*.log
+logs/security.log
+logs/error.log
+
+# Model weights & training data
+data/models/
+data/training_data/
+data/datasets/
+
+# API keys & tokens
+*.key
+*.token
+*.secret
+.env.local
+.env.production
+
+# =============================================================================
+# 5. BUILD & DISTRIBUTION SYSTEMS
+# =============================================================================
+# Python builds
+*.manifest
+*.spec
+
+# Executables
+*.exe
+*.msi
+*.dmg
+*.pkg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# =============================================================================
+# 6. OPERATING SYSTEM ARTIFACTS
+# =============================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# 7. TEMPORARY & CACHE FILES
+# =============================================================================
+# General cache
+.cache/
+.tmp/
+temp/
+tmp/
+
+# Browser cache
+.cache/
+.chromium/
+.firefox/
+
+# System temp
+/tmp/
+/var/tmp/
+
+# Application specific
+speech_cache/
+ocr_cache/
+video_cache/
+audio_cache/
+
+# =============================================================================
+# 8. DATABASES & PERSISTENCE
+# =============================================================================
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+*.pgdump
+*.pgpass
+
+# MySQL
+*.sql
+*.mysql
+
+# MongoDB
+*.mongodump
+
+# Redis
+dump.rdb
+
+# LevelDB
+*.ldb
+*.log
+
+# NeoMate specific
+neomate.db
+memory.db
+context.db
+
+# =============================================================================
+# 9. AI/ML & DATA SCIENCE ASSETS
+# =============================================================================
+# Model files
+*.h5
+*.hdf5
+*.pb
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.weights
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.tflite
+
+# Dataset files
+*.csv
+*.json
+*.parquet
+*.feather
+*.pkl.gz
+
+# Jupyter notebooks (optional - uncomment if needed)
+# *.ipynb
+
+# TensorBoard
+runs/
+logs/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# DVC
+.dvc/
+.dvc/tmp/
+.dvc/cache/
+
+# Weights & Biases
+wandb/
+
+# =============================================================================
+# 10. SECURITY & CRYPTOGRAPHY
+# =============================================================================
+# Keys & certificates
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+
+# Password files
+*.password
+*.passwd
+
+# Encryption keys
+*.gpg
+*.asc
+
+# Security logs
+security.log
+audit.log
+
+# =============================================================================
+# 11. MEDIA & ASSETS
+# =============================================================================
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.ico
+*.webp
+
+# Audio
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+*.m4a
+
+# Video
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.wmv
+*.flv
+
+# Documents
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+
+# =============================================================================
+# 12. TESTING & QUALITY ASSURANCE
+# =============================================================================
+# Test results
+test-results/
+test-reports/
+test-output/
+junit.xml
+testng-results.xml
+
+# Coverage reports
+coverage/
+.coverage
+htmlcov/
+
+# Performance testing
+benchmarks/
+performance.log
+
+# Load testing
+locust/
+jmeter.log
+
+# =============================================================================
+# 13. DEPLOYMENT & INFRASTRUCTURE
+# =============================================================================
+# Docker
+.dockerignore
+Dockerfile.*
+docker-compose.override.yml
+.docker/
+
+# Kubernetes
+*.yaml
+*.yml
+k8s/
+helm/
+
+# Terraform
+*.tfstate
+*.tfvars
+.terraform/
+
+# Ansible
+ansible.cfg
+inventory/
+playbooks/
+
+# CloudFormation
+*.template
+*.stack
+
+# Serverless
+.serverless/
+
+# =============================================================================
+# 14. ADVANCED DEVELOPMENT TOOLS
+# =============================================================================
+# Pre-commit hooks
+.pre-commit-config.yaml
+.pre-commit/
+
+# Git hooks
+.git/hooks/
+
+# Linting & formatting
+.pylintrc
+.flake8
+.black
+.isort.cfg
+.ruff.toml
+
+# Documentation
+docs/_build/
+site/
+_book/
+
+# CI/CD
+.github/workflows/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Code quality
+sonar-project.properties
+.codeclimate.yml
+
+# Dependency scanning
+dependency-check-report.html
+
+# =============================================================================
+# 15. LEGACY & BACKUP FILES
+# =============================================================================
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.sav
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Version control conflicts
+*.orig
+*.rej
+
+# Swap files (various editors)
+*.swp
+*.swo
+*.swn
+*.swm
+
+# =============================================================================
+# PROJECT SPECIFIC PATTERNS
+# =============================================================================
+# NeoMate AI specific
+neomate_config.local
+neomate_secrets.local
+debug.log
+performance.log
+
+# Voice & speech
+*.wav.temp
+speech_cache/
+
+# Screen processing
+screen_temp/
+ocr_cache/
+
+# Memory management
+memory_dump/
+cache_dump/
+
+# =============================================================================
+# FUTURE-PROOFING PATTERNS
+# =============================================================================
+# WebAssembly (if used)
+*.wasm
+*.wat
+
+# Rust (if bindings used)
+target/
+Cargo.lock
+*.rs.bk
+
+# Go (if microservices)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Java (if Android integration)
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# =============================================================================
+# MAINTENANCE NOTES
+# =============================================================================
+# This .gitignore is designed to be comprehensive yet maintainable.
+# Regular review and updates are recommended as the project evolves.
+#
+# Usage Tips:
+# - Use 'git status --ignored' to verify ignored files
+# - Use '!pattern' to include files that would otherwise be ignored
+# - Add project-specific patterns as needed
+# - Consider security implications when modifying sensitive data patterns
+#
+# Last Updated: 2025
+# NeoMate AI Development Team
+# =============================================================================
