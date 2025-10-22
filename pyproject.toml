@@ -2,12 +2,10 @@
 name = "neomate-ai"
 version = "0.1.0"
 description = "A highly advanced, offline-first, open-source AI assistant."
-authors = ["NeoMate Team <team@neomate.ai>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/yourusername/neomate-ai"
-repository = "https://github.com/yourusername/neomate-ai"
-documentation = "https://neomate-ai.readthedocs.io/"
+homepage = "https://github.com/emonhmamun"
+repository = "https://github.com/emonhmamun/NeoMate-Ai-Assistant"
 keywords = ["ai", "assistant", "automation", "voice", "vision", "open-source"]
 classifiers = [
     "Development Status :: 3 - Alpha",
