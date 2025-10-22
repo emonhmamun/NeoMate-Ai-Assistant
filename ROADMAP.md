@@ -138,7 +138,7 @@ gantt
     title NeoMate AI Progress Tracking
     dateFormat YYYY-MM-DD
     section Completed
-    Project Setup     :done, 2023-01-01, 2023-03-01
+    Project Setup     :done, 2025-010-020, 2023-03-01
     section Ongoing
     Config and Logging   :active, 2023-03-01, 2023-04-01
     section Upcoming
