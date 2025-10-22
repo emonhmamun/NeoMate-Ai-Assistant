@@ -21,8 +21,57 @@ classifiers = [
 packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
+# Core System & Environment
+psutil = "^5.9.0"
+py-cpuinfo = "^9.0.0"
 pyyaml = "^6.0.3"
+loguru = "^0.7.0"
+pydantic = "^2.0.0"
+
+# Perception Engine (Hyper-Aware Senses)
+pyaudio = "^0.2.13"
+pvporcupine = "^3.0.0"
+faster-whisper = "^0.10.0"
+pyannote-audio = "^3.0.0"
+webrtcvad = "^2.0.10"
+# rnnoise = "^0.1.0"  # Commented out as package not available on PyPI
+speechbrain = "^0.5.16"
+mss = "^9.0.1"
+pywin32 = {version = "^306", markers = "sys_platform == 'win32'"}
+python-xlib = {version = "^0.33", markers = "sys_platform == 'linux'"}
+easyocr = "^1.7.1"
+ultralytics = "^8.0.0"  # For YOLOv8
+opencv-python = "^4.8.0"
+
+# Cognitive Core (The Sentient Brain)
+langchain = "^0.1.0"
+aiohttp = "^3.9.0"
+llama-cpp-python = "^0.2.0"
+duckduckgo-search = "^5.0.0"
+beautifulsoup4 = "^4.12.0"
+requests = "^2.31.0"
+chromadb = "^0.4.0"
+tinydb = "^4.8.0"
+meilisearch = "^0.28.0"
+
+# Action & Expression Engine (The Body & Voice)
+pyautogui = "^0.9.54"
+pynput = "^1.7.6"
+pycaw = {version = "^20230407", markers = "sys_platform == 'win32'"}
+pyalsaaudio = {version = "^0.11.0", markers = "sys_platform == 'linux'"}
+pyside6 = {version = "^6.8.0", python = ">=3.9,<3.13"}
+coqui-tts = {version = "^0.22.0", python = ">=3.11,<3.12"}
+plyer = "^2.1.0"
+rich = "^13.7.0"
+
+# AI Foundation
+torch = "^2.1.0"
+torchvision = "^0.16.0"
+torchaudio = "^2.1.0"
+
+# Packaging & Development
+pyinstaller = "^6.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
