@@ -214,9 +214,9 @@ As NeoMate AI matures, consider specialized licenses for:
 
 ### 📊 **Repository Statistics:**
 
-[![GitHub stars](https://img.shields.io/github/stars/emonhmamun/NeoMate-AI-Agent.svg)](https://github.com/emonhmamun/NeoMate-AI-Agent/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/emonhmamun/NeoMate-AI-Agent.svg)](https://github.com/emonhmamun/NeoMate-AI-Agent/network)
-[![GitHub issues](https://img.shields.io/github/issues/emonhmamun/NeoMate-AI-Agent.svg)](https://github.com/emonhmamun/NeoMate-AI-Agent/issues)
+[![GitHub stars](https://img.shields.io/github/stars/emonhmamun/NeoMate-Ai-Assistant.svg)](https://github.com/emonhmamun/NeoMate-Ai-Assistant/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/emonhmamun/NeoMate-Ai-Assistant.svg)](https://github.com/emonhmamun/NeoMate-Ai-Assistant/network)
+[![GitHub issues](https://img.shields.io/github/issues/emonhmamun/NeoMate-Ai-Assistant.svg)](https://github.com/emonhmamun/NeoMate-Ai-Assistant/issues)
 
 ---
 
