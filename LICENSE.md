@@ -11,7 +11,7 @@
 ```
 MIT License
 
-Copyright (c) 2024 MD Mamun
+Copyright (c) 2025 MD Mamun
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -214,9 +214,9 @@ As NeoMate AI matures, consider specialized licenses for:
 
 ### 📊 **Repository Statistics:**
 
-[![GitHub stars](https://github.com/emonhmamun/NeoMate-Ai-Assistant.svg)](https://github.com/emonhmamun/NeoMate-Ai-Assistant/stargazers)
-[![GitHub forks](https://github.com/emonhmamun/NeoMate-Ai-Assistant.svg)](https://github.com/emonhmamun/NeoMate-Ai-Assistant/network)
-[![GitHub issues](https://github.com/emonhmamun/NeoMate-Ai-Assistant.svg)](https://github.com/emonhmamun/NeoMate-Ai-Assistant/issues)
+[![GitHub stars](https://img.shields.io/github/stars/emonhmamun/NeoMate-AI-Agent.svg)](https://github.com/emonhmamun/NeoMate-AI-Agent/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/emonhmamun/NeoMate-AI-Agent.svg)](https://github.com/emonhmamun/NeoMate-AI-Agent/network)
+[![GitHub issues](https://img.shields.io/github/issues/emonhmamun/NeoMate-AI-Agent.svg)](https://github.com/emonhmamun/NeoMate-AI-Agent/issues)
 
 ---
 
