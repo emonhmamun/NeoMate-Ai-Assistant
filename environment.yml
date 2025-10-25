@@ -1,57 +1,174 @@
+# =============================================================================
+# NeoMate AI - Conda Environment Configuration
+# =============================================================================
+# Comprehensive conda environment for NeoMate AI Assistant
+# Compatible with conda env create -f environment.yml
+# Includes all necessary dependencies for development and deployment
+# Last Updated: 2024
+# =============================================================================
+
 name: neomate-ai
+
 channels:
   - defaults
   - conda-forge
+  - pytorch
+  - huggingface
+
 dependencies:
+  # ------------------------------------------------------------------------------
+  # PYTHON CORE
+  # ------------------------------------------------------------------------------
   - python>=3.11,<3.14
-  # Core System & Environment
-  - psutil>=5.9.0
-  - py-cpuinfo>=9.0.0
-  - pyyaml>=6.0.3
-  - loguru>=0.7.0
-  - pydantic>=2.0.0
-  # Perception Engine (Hyper-Aware Senses)
+  - pip>=23.0.0
+  - setuptools>=65.0.0
+  - wheel>=0.40.0
+
+  # ------------------------------------------------------------------------------
+  # CORE AI AND MACHINE LEARNING
+  # ------------------------------------------------------------------------------
+  - pytorch>=2.0.0
+  - torchvision>=0.15.0
+  - torchaudio>=2.0.0
+  - transformers>=4.30.0
+  - tokenizers>=0.13.0
+  - accelerate>=0.20.0
+  - bitsandbytes>=0.41.0
+
+  # ------------------------------------------------------------------------------
+  # AUDIO PROCESSING AND SPEECH
+  # ------------------------------------------------------------------------------
+  - portaudio>=19.6.0 # Required for pyaudio
   - pyaudio>=0.2.13
   - pvporcupine>=3.0.0
-  - faster-whisper>=0.10.0
+  - faster-whisper>=1.0.0
   - pyannote-audio>=3.0.0
   - webrtcvad>=2.0.10
-
   - speechbrain>=0.5.16
-  - mss>=9.0.1
-  - pywin32>=306 # Windows only
-  - python-xlib>=0.33 # Linux only
-  - easyocr>=1.7.1
-  - ultralytics>=8.0.0
+  - piper-tts>=1.2.0
+  - rnnoise>=0.1.0
+
+  # ------------------------------------------------------------------------------
+  # VISION AND COMPUTER VISION
+  # ------------------------------------------------------------------------------
   - opencv>=4.8.0
-  # Cognitive Core (The Sentient Brain)
-  - langchain>=0.1.0
-  - aiohttp>=3.9.0
-  - llama-cpp-python>=0.2.0
-  - duckduckgo-search>=5.0.0
-  - beautifulsoup4>=4.12.0
+  - easyocr>=1.7.0
+  - ultralytics>=8.0.0
+  - mss>=9.0.0
+  - pillow>=9.0.0
+
+  # ------------------------------------------------------------------------------
+  # AUTOMATION AND INPUT CONTROL
+  # ------------------------------------------------------------------------------
+  - pyautogui>=0.9.54
+  - pynput>=1.7.6
+
+  # ------------------------------------------------------------------------------
+  # SYSTEM MONITORING AND UTILITIES
+  # ------------------------------------------------------------------------------
+  - psutil>=5.9.0
+  - pyyaml>=6.0
+  - loguru>=0.7.0
+  - pydantic>=2.0.0
+  - rich>=13.0.0
+  - plyer>=2.1.0
+  - py-cpuinfo>=9.0.0
+
+  # ------------------------------------------------------------------------------
+  # NETWORKING AND WEB INTERACTION
+  # ------------------------------------------------------------------------------
+  - httpx>=0.25.0
+  - aiohttp>=3.8.0
   - requests>=2.31.0
+  - beautifulsoup4>=4.12.0
+  - duckduckgo-search>=3.8.0
+  - searxng>=0.1.0
+
+  # ------------------------------------------------------------------------------
+  # DATABASE AND SEARCH
+  # ------------------------------------------------------------------------------
   - chromadb>=0.4.0
   - tinydb>=4.8.0
   - meilisearch>=0.28.0
-  # Action & Expression Engine (The Body & Voice)
-  - pyautogui>=0.9.54
-  - pynput>=1.7.6
-  - pycaw>=20230407 # Windows only
-  - pyalsaaudio>=0.11.0 # Linux only
-  - pyside6>=6.8.0
-  - coqui-tts>=0.22.0
-  - plyer>=2.1.0
-  - rich>=13.7.0
-  # AI Foundation
-  - pytorch>=2.1.0
-  - torchvision>=0.16.0
-  - torchaudio>=2.1.0
-  # Packaging & Development
+  - faiss-cpu>=1.7.0
+
+  # ------------------------------------------------------------------------------
+  # LOCAL LARGE LANGUAGE MODELS
+  # ------------------------------------------------------------------------------
+  - llama-cpp-python>=0.2.0
+
+  # ------------------------------------------------------------------------------
+  # NATURAL LANGUAGE PROCESSING AND LANGCHAIN
+  # ------------------------------------------------------------------------------
+  - langchain>=0.0.300
+  - langchain-core>=0.1.0
+  - langchain-community>=0.0.10
+  - sentence-transformers>=2.2.0
+
+  # ------------------------------------------------------------------------------
+  # PLATFORM SPECIFIC DEPENDENCIES
+  # ------------------------------------------------------------------------------
+  # Windows specific
+  - pywin32>=306 # [win]
+  - pycaw>=20230407 # [win]
+  # Linux specific
+  - python-xlib>=0.33 # [linux]
+  - pyalsaaudio>=0.10.0 # [linux]
+
+  # ------------------------------------------------------------------------------
+  # USER INTERFACE
+  # ------------------------------------------------------------------------------
+  - pyside6>=6.5.0
+
+  # ------------------------------------------------------------------------------
+  # PACKAGING AND DISTRIBUTION
+  # ------------------------------------------------------------------------------
   - pyinstaller>=6.0.0
-  - pip
+
+  # ------------------------------------------------------------------------------
+  # DEVELOPMENT AND TESTING
+  # ------------------------------------------------------------------------------
+  - pytest>=7.4.0
+  - pytest-asyncio>=0.21.0
+  - pytest-cov>=4.1.0
+  - black>=23.7.0
+  - isort>=5.12.0
+  - ruff>=0.0.285
+  - mypy>=1.0.0
+  - pre-commit>=3.4.0
+  - tox>=4.6.0
+  - sphinx>=7.0.0
+  - sphinx-rtd-theme>=1.3.0
+
+  # ------------------------------------------------------------------------------
+  # ADDITIONAL UTILITIES
+  # ------------------------------------------------------------------------------
+  - jupyter>=1.0.0
+  - ipython>=8.0.0
+  - numpy>=1.24.0
+  - scipy>=1.10.0
+  - pandas>=1.5.0
+  - matplotlib>=3.6.0
+  - seaborn>=0.12.0
+
+  # ------------------------------------------------------------------------------
+  # PIP-ONLY DEPENDENCIES
+  # ------------------------------------------------------------------------------
   - pip:
-      - pytest>=7.4.0
-      - black>=23.7.0
-      - isort>=5.12.0
-      - ruff>=0.0.287
+      # Additional packages not available via conda
+      - git+https://github.com/openai/whisper.git # Latest Whisper
+      - unstructured[local-inference]>=0.10.0 # For document processing
+
+# =============================================================================
+# ENVIRONMENT SETUP INSTRUCTIONS
+# =============================================================================
+# Create environment: conda env create -f environment.yml
+# Activate: conda activate neomate-ai
+# Update: conda env update -f environment.yml
+# Remove: conda env remove -n neomate-ai
+#
+# Notes:
+# - Ensure conda is updated: conda update conda
+# - For GPU support, install cudatoolkit: conda install cudatoolkit
+# - Some packages may require manual installation on certain platforms
+# =============================================================================

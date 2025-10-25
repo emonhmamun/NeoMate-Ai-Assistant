@@ -1,42 +1,141 @@
-py-cpuinfo
-pydantic
-duckduckgo_search
-beautifulsoup4
-requests
-chromadb
-torch
-torchvision
-torchaudio
-pytest
-black
-isort
-ruff
-pyinstaller
-psutil
-pyyaml
-loguru
-pyaudio
-pvporcupine
-faster-whisper
-pyannote-audio
-webrtcvad
-speechbrain
-mss
-pywin32
-python-xlib
-easyocr
-ultralytics
-opencv-python
-langchain
-aiohttp
-llama-cpp-python
-meilisearch
-tinydb
-pyautogui
-pynput
-pycaw
-pyalsaaudio
-pyside6
-coqui-tts
-plyer
-rich
+# =============================================================================
+# NeoMate AI - Requirements File
+# =============================================================================
+# Comprehensive dependency list for NeoMate AI Assistant
+# Organized by category for clarity and maintainability
+# Compatible with pip install -r requirements.txt
+# Last Updated: 2024
+# =============================================================================
+
+# ------------------------------------------------------------------------------
+# CORE AI AND MACHINE LEARNING
+# ------------------------------------------------------------------------------
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+accelerate>=0.20.0
+bitsandbytes>=0.41.0
+
+# ------------------------------------------------------------------------------
+# AUDIO PROCESSING AND SPEECH
+# ------------------------------------------------------------------------------
+pyaudio>=0.2.13
+pvporcupine>=3.0.0
+faster-whisper>=1.0.0
+pyannote-audio>=3.0.0
+webrtcvad>=2.0.10
+speechbrain==0.5.16
+piper-tts>=1.2.0
+
+
+# ------------------------------------------------------------------------------
+# VISION AND COMPUTER VISION
+# ------------------------------------------------------------------------------
+opencv-python>=4.8.0
+easyocr>=1.7.0
+ultralytics>=8.0.0
+mss>=9.0.0
+pillow>=9.0.0
+
+# ------------------------------------------------------------------------------
+# AUTOMATION AND INPUT CONTROL
+# ------------------------------------------------------------------------------
+pyautogui>=0.9.54
+pynput>=1.7.6
+
+# ------------------------------------------------------------------------------
+# SYSTEM MONITORING AND UTILITIES
+# ------------------------------------------------------------------------------
+psutil>=5.9.0
+pyyaml>=6.0
+loguru>=0.7.0
+pydantic>=2.0.0
+rich>=13.0.0
+plyer>=2.1.0
+py-cpuinfo>=9.0.0
+
+# ------------------------------------------------------------------------------
+# NETWORKING AND WEB INTERACTION
+# ------------------------------------------------------------------------------
+httpx>=0.25.0
+aiohttp>=3.8.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+duckduckgo-search>=3.8.0
+searxng>=0.1.0
+
+# ------------------------------------------------------------------------------
+# DATABASE AND SEARCH
+# ------------------------------------------------------------------------------
+chromadb>=0.4.0
+tinydb>=4.8.0
+meilisearch>=0.28.0
+faiss-cpu>=1.7.0
+
+# ------------------------------------------------------------------------------
+# LOCAL LARGE LANGUAGE MODELS
+# ------------------------------------------------------------------------------
+llama-cpp-python>=0.2.0
+
+# ------------------------------------------------------------------------------
+# NATURAL LANGUAGE PROCESSING AND LANGCHAIN
+# ------------------------------------------------------------------------------
+langchain>=0.0.300
+langchain-core>=0.1.0
+langchain-community>=0.0.10
+sentence-transformers>=2.2.0
+
+# ------------------------------------------------------------------------------
+# PLATFORM SPECIFIC DEPENDENCIES
+# ------------------------------------------------------------------------------
+# Windows specific
+pywin32>=306; sys_platform == 'win32'
+pycaw>=20230407; sys_platform == 'win32'
+# Linux specific
+python-xlib>=0.33; sys_platform == 'linux'
+pyalsaaudio>=0.10.0; sys_platform == 'linux'
+
+# ------------------------------------------------------------------------------
+# USER INTERFACE
+# ------------------------------------------------------------------------------
+pyside6>=6.5.0
+
+# ------------------------------------------------------------------------------
+# PACKAGING AND DISTRIBUTION
+# ------------------------------------------------------------------------------
+pyinstaller>=6.0.0
+
+# ------------------------------------------------------------------------------
+# ADDITIONAL UTILITIES
+# ------------------------------------------------------------------------------
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=1.5.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# ------------------------------------------------------------------------------
+# DEVELOPMENT AND TESTING (Optional for production)
+# ------------------------------------------------------------------------------
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+black>=23.7.0
+isort>=5.12.0
+ruff>=0.0.285
+mypy>=1.0.0
+pre-commit>=3.4.0
+tox>=4.6.0
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.3.0
+
+# =============================================================================
+# NOTES
+# =============================================================================
+# - Install with: pip install -r requirements.txt
+# - For development: pip install -r requirements.txt --editable
+# - Ensure Python 3.11+ for optimal compatibility
+# - Some packages may require system dependencies (e.g., portaudio for pyaudio)
+# - GPU support: Install torch with CUDA if available
+# =============================================================================
